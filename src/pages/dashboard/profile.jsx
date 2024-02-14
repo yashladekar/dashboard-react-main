@@ -51,7 +51,7 @@ export function Profile() {
                 </Typography>
               </div>
             </div>
-            <div className="w-96">
+            {/* <div className="w-96">
               <Tabs value="app">
                 <TabsHeader>
                   <Tab value="app">
@@ -68,10 +68,10 @@ export function Profile() {
                   </Tab>
                 </TabsHeader>
               </Tabs>
-            </div>
+            </div> */}
           </div>
-          <div className="gird-cols-1 mb-12 grid gap-12 px-4 lg:grid-cols-2 xl:grid-cols-3">
-            <div>
+          {/* <div className="gird-cols-1 mb-12 grid gap-12 px-4 lg:grid-cols-2 xl:grid-cols-3"> */}
+            {/* <div>
               <Typography variant="h6" color="blue-gray" className="mb-3">
                 Platform Settings
               </Typography>
@@ -97,8 +97,8 @@ export function Profile() {
                   </div>
                 ))}
               </div>
-            </div>
-            <ProfileInfoCard
+            </div> */}
+            {/* <ProfileInfoCard
               title="Profile Information"
               description="Hi, I'm Alec Thompson, Decisions: If you can't decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
               details={{
@@ -119,8 +119,8 @@ export function Profile() {
                   <PencilIcon className="h-4 w-4 cursor-pointer text-blue-gray-500" />
                 </Tooltip>
               }
-            />
-            <div>
+            /> */}
+            {/* <div>
               <Typography variant="h6" color="blue-gray" className="mb-3">
                 Platform Settings
               </Typography>
@@ -137,9 +137,9 @@ export function Profile() {
                   />
                 ))}
               </ul>
-            </div>
-          </div>
-          <div className="px-4 pb-4">
+            </div> */}
+          {/* </div> */}
+          {/* <div className="px-4 pb-4">
             <Typography variant="h6" color="blue-gray" className="mb-2">
               Projects
             </Typography>
@@ -211,7 +211,7 @@ export function Profile() {
                 )
               )}
             </div>
-          </div>
+          </div> */}
         </CardBody>
       </Card>
     </>
