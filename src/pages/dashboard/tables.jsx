@@ -17,14 +17,14 @@ export function Tables() {
       <Card>
         <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
           <Typography variant="h6" color="white">
-            Authors Table
+            links Table
           </Typography>
         </CardHeader>
         <CardBody className="overflow-x-scroll px-0 pt-0 pb-2">
           <table className="w-full min-w-[640px] table-auto">
             <thead>
               <tr>
-                {["author", "function", "status", "employed", ""].map((el) => (
+                {["All Links", "status", ].map((el) => (
                   <th
                     key={el}
                     className="border-b border-blue-gray-50 py-3 px-5 text-left"
@@ -52,29 +52,30 @@ export function Tables() {
                     <tr key={name}>
                       <td className={className}>
                         <div className="flex items-center gap-4">
-                          <Avatar src={img} alt={name} size="sm" variant="rounded" />
+                          {/* <Avatar src={img} alt={name} size="sm" variant="rounded" /> */}
                           <div>
                             <Typography
                               variant="small"
                               color="blue-gray"
                               className="font-semibold"
                             >
-                              {name}
+                              {/* {} */}
+                              links
                             </Typography>
-                            <Typography className="text-xs font-normal text-blue-gray-500">
+                            {/* <Typography className="text-xs font-normal text-blue-gray-500">
                               {email}
-                            </Typography>
+                            </Typography> */}
                           </div>
                         </div>
                       </td>
-                      <td className={className}>
+                      {/* <td className={className}>
                         <Typography className="text-xs font-semibold text-blue-gray-600">
                           {job[0]}
                         </Typography>
                         <Typography className="text-xs font-normal text-blue-gray-500">
                           {job[1]}
                         </Typography>
-                      </td>
+                      </td> */}
                       <td className={className}>
                         <Chip
                           variant="gradient"
@@ -83,7 +84,7 @@ export function Tables() {
                           className="py-0.5 px-2 text-[11px] font-medium w-fit"
                         />
                       </td>
-                      <td className={className}>
+                      {/* <td className={className}>
                         <Typography className="text-xs font-semibold text-blue-gray-600">
                           {date}
                         </Typography>
@@ -96,7 +97,7 @@ export function Tables() {
                         >
                           Edit
                         </Typography>
-                      </td>
+                      </td> */}
                     </tr>
                   );
                 }
@@ -105,7 +106,7 @@ export function Tables() {
           </table>
         </CardBody>
       </Card>
-      <Card>
+      {/* <Card>
         <CardHeader variant="gradient" color="gray" className="mb-8 p-6">
           <Typography variant="h6" color="white">
             Projects Table
@@ -213,7 +214,7 @@ export function Tables() {
             </tbody>
           </table>
         </CardBody>
-      </Card>
+      </Card> */}
     </div>
   );
 }
