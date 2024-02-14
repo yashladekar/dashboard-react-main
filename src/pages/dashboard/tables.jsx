@@ -3,12 +3,8 @@ import {
   CardHeader,
   CardBody,
   Typography,
-  Avatar,
   Chip,
-  Tooltip,
-  Progress,
 } from "@material-tailwind/react";
-import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 import { authorsTableData, projectsTableData } from "@/data";
 
 export function Tables() {
@@ -47,35 +43,22 @@ export function Tables() {
                       ? ""
                       : "border-b border-blue-gray-50"
                   }`;
-
                   return (
                     <tr key={name}>
                       <td className={className}>
                         <div className="flex items-center gap-4">
-                          {/* <Avatar src={img} alt={name} size="sm" variant="rounded" /> */}
                           <div>
                             <Typography
                               variant="small"
                               color="blue-gray"
                               className="font-semibold"
                             >
-                              {/* {} */}
                               links
                             </Typography>
-                            {/* <Typography className="text-xs font-normal text-blue-gray-500">
-                              {email}
-                            </Typography> */}
+                            
                           </div>
                         </div>
                       </td>
-                      {/* <td className={className}>
-                        <Typography className="text-xs font-semibold text-blue-gray-600">
-                          {job[0]}
-                        </Typography>
-                        <Typography className="text-xs font-normal text-blue-gray-500">
-                          {job[1]}
-                        </Typography>
-                      </td> */}
                       <td className={className}>
                         <Chip
                           variant="gradient"
@@ -84,20 +67,6 @@ export function Tables() {
                           className="py-0.5 px-2 text-[11px] font-medium w-fit"
                         />
                       </td>
-                      {/* <td className={className}>
-                        <Typography className="text-xs font-semibold text-blue-gray-600">
-                          {date}
-                        </Typography>
-                      </td>
-                      <td className={className}>
-                        <Typography
-                          as="a"
-                          href="#"
-                          className="text-xs font-semibold text-blue-gray-600"
-                        >
-                          Edit
-                        </Typography>
-                      </td> */}
                     </tr>
                   );
                 }
