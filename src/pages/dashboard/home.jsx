@@ -25,6 +25,9 @@ import {
   ordersOverviewData,
 } from "@/data";
 import { CheckCircleIcon, ClockIcon } from "@heroicons/react/24/solid";
+import XssComponent from "@/components/xss";
+import SSLCheckComponent from "@/components/SSLCheckComponent";
+// import DeviceCompatibility from "@/components/DeviceCompatibility";
 
 export function Home() {
   const [data, setData] = useState(null);
@@ -94,6 +97,9 @@ export function Home() {
           />
         ))}
       </div>
+      <XssComponent/>
+      <SSLCheckComponent/>  
+      {/* <DeviceCompatibility/> */}
       <div className="mb-6 grid grid-cols-1 gap-y-12 gap-x-6 md:grid-cols-2 xl:grid-cols-3">
         {statisticsChartsData.map((props) => (
           <StatisticsChart

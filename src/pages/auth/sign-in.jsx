@@ -8,7 +8,7 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-
+import axios from "axios";
 
 export function SignIn() {
 
@@ -16,7 +16,7 @@ export function SignIn() {
   function handleSubmit(e){
     e.preventDefault(); // Prevent the default form submission behavior
     console.log(userData)
-  axios.post('https://xyz.com', userData) 
+  axios.post('http://localhost:3005/user/login', userData) 
     .then(response => {
       console.log(response);
     })
@@ -61,24 +61,7 @@ export function SignIn() {
               }}
             />
           </div>
-          {/* <Checkbox
-            label={
-              <Typography
-                variant="small"
-                color="gray"
-                className="flex items-center justify-start font-medium"
-              >
-                I agree the&nbsp;
-                <a
-                  href="#"
-                  className="font-normal text-black transition-colors hover:text-gray-900 underline"
-                >
-                  Terms and Conditions
-                </a>
-              </Typography>
-            }
-            containerProps={{ className: "-ml-2.5" }}
-          /> */}
+          
           <Button 
           onClick={(e)=>handleSubmit(e)}
           className="mt-6" fullWidth>

@@ -11,9 +11,10 @@
   "dependencies": {
     "@dicebear/collection": "^7.0.4",
     "@dicebear/core": "^7.0.4",
-    "@heroicons/react": "2.0.18",
+    "@heroicons/react": "^1.0.6",
     "@material-tailwind/react": "2.1.4",
     "apexcharts": "3.44.0",
+    "axios": "^1.6.7",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-apexcharts": "1.4.1",
