@@ -5,10 +5,24 @@ import {
   Button,
   Typography,
 } from "@material-tailwind/react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 export function SignUp() {
+
+  const[signData,setSignData]=useState({email:"",password:"",name:""})
+  function handleRegister(e){
+    e.preventDefault();
+    console.log(signData);
+    axios.post('https://xyz.com', signData) 
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.error('There was an error!', error);
+    });
+  }
   return (
     <section className="m-8 flex">
             <div className="w-2/5 h-full hidden lg:block">
@@ -24,10 +38,14 @@ export function SignUp() {
         </div>
         <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
           <div className="mb-1 flex flex-col gap-6">
+           
+           
             <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
               Your email
             </Typography>
             <Input
+              onChange={(e)=>setSignData({...signData,email:e.target.value})}
+              value={signData.email}
               size="lg"
               placeholder="name@mail.com"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
@@ -35,8 +53,40 @@ export function SignUp() {
                 className: "before:content-none after:content-none",
               }}
             />
+            
+            <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+              Name
+            </Typography>
+            <Input
+              onChange={(e)=>setSignData({...signData,name:e.target.value})}
+              value={signData.name}
+              size="lg"
+              placeholder="Name"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              labelProps={{
+                className: "before:content-none after:content-none",
+              }}
+            />
+
+
+
+<Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
+              Password
+            </Typography>
+            <Input
+              onChange={(e)=>setSignData({...signData,password:e.target.value})}
+              value={signData.password}
+              type="password"
+              size="lg"
+              placeholder="password"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              labelProps={{
+                className: "before:content-none after:content-none",
+              }}
+            />
+
           </div>
-          <Checkbox
+          {/* <Checkbox
             label={
               <Typography
                 variant="small"
@@ -53,13 +103,15 @@ export function SignUp() {
               </Typography>
             }
             containerProps={{ className: "-ml-2.5" }}
-          />
-          <Button className="mt-6" fullWidth>
+          /> */}
+          <Button 
+          onClick={(e)=>handleRegister(e)}
+          className="mt-6" fullWidth>
             Register Now
           </Button>
 
-          <div className="space-y-4 mt-8">
-            <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
+          {/* <div className="space-y-4 mt-8"> */}
+            {/* <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
               <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1156_824)">
                   <path d="M16.3442 8.18429C16.3442 7.64047 16.3001 7.09371 16.206 6.55872H8.66016V9.63937H12.9813C12.802 10.6329 12.2258 11.5119 11.3822 12.0704V14.0693H13.9602C15.4741 12.6759 16.3442 10.6182 16.3442 8.18429Z" fill="#4285F4" />
@@ -74,12 +126,12 @@ export function SignUp() {
                 </defs>
               </svg>
               <span>Sign in With Google</span>
-            </Button>
-            <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
+            </Button> */}
+            {/* <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
               <img src="/img/twitter-logo.svg" height={24} width={24} alt="" />
               <span>Sign in With Twitter</span>
-            </Button>
-          </div>
+            </Button> */}
+          {/* </div> */}
           <Typography variant="paragraph" className="text-center text-blue-gray-500 font-medium mt-4">
             Already have an account?
             <Link to="/auth/sign-in" className="text-gray-900 ml-1">Sign in</Link>
