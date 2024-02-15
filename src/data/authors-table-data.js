@@ -1,7 +1,7 @@
 export const authorsTableData = [
   {
     img: "/img/team-2.jpeg",
-    name: "John Michael",
+    name: "rahul mahajan",
     email: "john@creative-tim.com",
     job: ["Manager", "Organization"],
     online: true,

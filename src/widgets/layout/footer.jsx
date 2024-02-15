@@ -47,7 +47,6 @@ Footer.defaultProps = {
     { name: "Yash Ladekar", path: "https://github.com/yashladekar" },
     { name: "Vaibhav Bhatkare", path: "https://github.com/vaibhavbhatkare" },
     { name: "Rahul Mahajan", path: "https://github.com/rahulmahajan000" },
-    { name: "Abhiest Yadav", path: "https://github.com/abhiestyadav" }
   ],
 };
 
